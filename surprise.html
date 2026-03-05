@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quiz Game</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .message { display: none; font-weight: bold; color: #FF79C6; }
+    </style>
+    <script>
+        function checkAnswers() {
+            const answers = ["Paris", "20th March", "black crop top and blue jeans", "temple"];
+            const userAnswers = [];
+            userAnswers.push(document.getElementById('q1').value);
+            userAnswers.push(document.getElementById('q2').value);
+            userAnswers.push(document.getElementById('q3').value);
+            userAnswers.push(document.getElementById('q4').value);
+
+            const isCorrect = answers.every((answer, index) => answer.toLowerCase() === userAnswers[index].toLowerCase());
+            const message = document.getElementById('loveMessage');
+            if (isCorrect) {
+                message.style.display = 'block';
+            } else {
+                alert('Try again!');
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Quiz Game: Unlock Love Messages!</h1>
+    <p>Answer the questions below to unlock a special love message.</p>
+    <form onsubmit="event.preventDefault(); checkAnswers();">
+        <label for="q1">1. What's your favorite place?</label><br>
+        <input type="text" id="q1" required><br><br>
+
+        <label for="q2">2. What date did we first meet?</label><br>
+        <input type="text" id="q2" required><br><br>
+
+        <label for="q3">3. What did I wear on our first date?</label><br>
+        <input type="text" id="q3" required><br><br>
+
+        <label for="q4">4. Where was our first place together?</label><br>
+        <input type="text" id="q4" required><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <div id="loveMessage" class="message">
+        I love you sooo much bubbu💗 ,, u will always be my favourite . Ummaahhh😘
+    </div>
+</body>
+</html>
