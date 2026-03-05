@@ -1,0 +1,106 @@
+/* ========================================== STYLES.CSS - LOVE PAGE STYLING ========================================== 
+PURPOSE: This stylesheet provides all the styling for the Love page. It includes:
+- Body styling with gradient background
+- Heart emoji styling for interactivity
+- Message box styling for the surprise reveal
+ ========================================== */
+
+/* BODY STYLING */
+body {
+    /* Center all text content on the page */
+    text-align: center;
+    /* Set font family to Arial for clean, readable text */
+    font-family: Arial, sans-serif;
+    /* Create a beautiful gradient background from pink to coral */
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    /* Add padding at the top to push content down from browser edge */
+    padding-top: 80px;
+    /* Ensure the body takes up full viewport height */
+    min-height: 100vh;
+    /* Remove default margin for cleaner layout */
+    margin: 0;
+}
+
+/* HEADING STYLING */
+h1 {
+    /* White color for high contrast against gradient background */
+    color: #fff;
+    /* Add slight shadow for depth and readability */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    /* Increase font size for prominence */
+    font-size: 2.5em;
+    /* Add margin for spacing */
+    margin-bottom: 30px;
+}
+
+/* HEART STYLING - Interactive Elements */
+.heart {
+    /* Large font size to make hearts prominent and clickable */
+    font-size: 40px;
+    /* Change cursor to pointer to indicate interactivity */
+    cursor: pointer;
+    /* Add margin around each heart for spacing */
+    margin: 10px;
+    /* Add smooth transition effect for visual feedback */
+    transition: transform 0.2s ease;
+    /* Allow text selection behavior */
+    user-select: none;
+}
+
+/* Heart hover effect - enlarge on mouse hover */
+.heart:hover {
+    /* Scale up the heart slightly when user hovers over it */
+    transform: scale(1.2);
+}
+
+/* Heart active effect - animate when clicked */
+.heart:active {
+    /* Shrink slightly when clicked for tactile feedback */
+    transform: scale(0.9);
+}
+
+/* MESSAGE BOX STYLING - Surprise Reveal Section */
+#message {
+    /* Initially hide the message box until hearts are clicked enough times */
+    display: none;
+    /* White background for good contrast and readability */
+    background: white;
+    /* Add internal spacing for comfortable reading */
+    padding: 30px;
+    /* Add external margin to center and space from content */
+    margin: 30px auto;
+    /* Set fixed width for consistent appearance */
+    width: 300px;
+    /* Rounded corners for modern, soft appearance */
+    border-radius: 15px;
+    /* Add shadow for depth and separation from background */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* Add smooth transition when revealing message */
+    transition: opacity 0.5s ease;
+}
+
+/* MESSAGE BOX TEXT STYLING */
+#message h2 {
+    /* Larger heading for the surprise title */
+    font-size: 1.8em;
+    /* Add margin for spacing */
+    margin-top: 0;
+    /* Add color to match theme */
+    color: #ff6b9d;
+}
+#message h3 {
+    /* Large, bold declaration */
+    font-size: 1.5em;
+    /* Color to match heart theme */
+    color: #ff6b9d;
+    /* Add margin for spacing */
+    margin: 20px 0;
+}
+#message p {
+    /* Readable paragraph spacing */
+    line-height: 1.6;
+    /* Add margin for spacing between paragraphs */
+    margin: 10px 0;
+    /* Slightly muted color for secondary text */
+    color: #555;
+}
